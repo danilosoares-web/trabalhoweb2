@@ -231,15 +231,17 @@ main.uma-coluna { grid-template-columns: 1fr; }
   background-position: center;
 }
 .lado.nadador {
+  background-position: 34% center;
   background-image:
     linear-gradient(rgba(5, 12, 22, 0.45), rgba(5, 12, 22, 0.8)),
-    url("img/nadador.jpg"),
+    url("nadador.jpg"),
     linear-gradient(135deg, #0b3b57, #38bdf8);
 }
 .lado.corredor {
+  background-position: center 40%;
   background-image:
     linear-gradient(rgba(5, 12, 22, 0.45), rgba(5, 12, 22, 0.8)),
-    url("img/corredor.jpg"),
+    url("corredor.jpg"),
     linear-gradient(135deg, #5a1f0a, #ff7a45);
 }
 .rotulo {
