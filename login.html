@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar • Diário de Treinos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mensagem" role="status" hidden></div>
+  <main class="login">
+    <section class="painel">
+      <h1>Diário de Treinos</h1>
+      <p>Entre ou crie sua conta para registrar seus treinos.</p>
+      <form id="form-login">
+        <label>E-mail
+          <input type="email" id="email" required autocomplete="email">
+        </label>
+        <label>Senha (mínimo 6 caracteres)
+          <input type="password" id="senha" required minlength="6" autocomplete="current-password">
+        </label>
+        <div class="botoes">
+          <button type="submit">Entrar</button>
+          <button type="button" id="btn-cadastrar" class="secundario">Criar conta</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="login.js"></script>
+</body>
+</html>

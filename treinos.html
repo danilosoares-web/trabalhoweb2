@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meus treinos • Diário de Treinos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <a href="index.html">Painel</a>
+      <a href="treinos.html" class="ativo">Meus treinos</a>
+      <span id="email-usuario"></span>
+      <button id="btn-sair" class="secundario">Sair</button>
+    </nav>
+    <h1>Meus treinos</h1>
+    <p>Todos os treinos que você já gravou.</p>
+  </header>
+
+  <div id="mensagem" role="status" hidden></div>
+
+  <main class="uma-coluna">
+    <section class="painel">
+      <div class="barra">
+        <strong id="contador"></strong>
+        <select id="filtro">
+          <option value="todos">Todas as modalidades</option>
+          <option value="corrida">Corrida</option>
+          <option value="natacao">Natação</option>
+        </select>
+      </div>
+      <div id="lista"></div>
+    </section>
+  </main>
+
+  <script type="module" src="treinos.js"></script>
+</body>
+</html>
