@@ -44,7 +44,7 @@ function desenharLista() {
         <p class="pace">Ritmo: ${formatarPace(calcularPace(t))} ${unidadePace}</p>
         <p>Esforço: ${t.esforco}/10</p>
         <div class="botoes">
-          <a href="index.html?editar=${t.id}">Editar</a>
+          <a href="painel.html?editar=${t.id}">Editar</a>
           <button data-id="${t.id}" class="perigo">Excluir</button>
         </div>
       </article>`;

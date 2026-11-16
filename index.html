@@ -9,83 +9,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="menu">
-      <a href="index.html" class="ativo">Painel</a>
-      <a href="treinos.html">Meus treinos</a>
-      <span id="email-usuario"></span>
-      <button id="btn-sair" class="secundario">Sair</button>
-    </nav>
-    <h1>Diário de Treinos</h1>
-    <p>Registre suas corridas e nados e acompanhe a evolução do seu ritmo.</p>
-  </header>
+  <!-- Barra do topo sobre a foto -->
+  <div class="topo">
+    <strong>Diário de Treinos</strong>
+    <a href="login.html">Entrar</a>
+  </div>
 
-  <!-- Mensagens de sucesso, erro e carregamento -->
-  <div id="mensagem" role="status" hidden></div>
+  <!-- Capa: duas fotos lado a lado + texto no centro -->
+  <section class="hero">
+    <div class="lado nadador"><span class="rotulo azul">Natação</span></div>
+    <div class="lado corredor"><span class="rotulo laranja">Corrida</span></div>
 
-  <!-- Cartões de resumo (preenchidos pelo JavaScript) -->
-  <section class="stats" id="stats"></section>
+    <div class="hero-texto">
+      <h1>Conheça o Diário de Treinos</h1>
+      <p>Registre suas corridas e nados, acompanhe seu ritmo e veja sua evolução semana após semana.</p>
+      <a class="botao-grande" href="login.html">Começar agora</a>
+    </div>
+  </section>
 
-  <main>
-    <!-- FORMULÁRIO (criar e editar) -->
-    <section class="painel">
-      <h2 id="titulo-form">Novo treino</h2>
-      <form id="form-treino">
-        <label>Modalidade
-          <select id="modalidade">
-            <option value="corrida">Corrida</option>
-            <option value="natacao">Natação</option>
-          </select>
-        </label>
-        <label>Data
-          <input type="date" id="data" required>
-        </label>
-        <label><span id="rotulo-distancia">Distância (km)</span>
-          <input type="number" id="distancia" min="0.1" step="0.1" required>
-        </label>
-        <label>Tempo total (minutos)
-          <input type="number" id="tempo" min="1" step="0.1" required>
-        </label>
-        <label>Esforço percebido (1 a 10)
-          <input type="number" id="esforco" min="1" max="10" required>
-        </label>
-        <label>Cidade (opcional, busca a temperatura do dia)
-          <input type="text" id="cidade" placeholder="Ex.: Volta Redonda">
-        </label>
-        <div class="botoes">
-          <button type="submit" id="btn-salvar">Salvar treino</button>
-          <button type="button" id="btn-cancelar" class="secundario" hidden>Cancelar edição</button>
-        </div>
-      </form>
-
-      <div class="demo">
-        <p>Quer ver como o app fica cheio?</p>
-        <button type="button" id="btn-demo" class="secundario">Gerar dados de exemplo</button>
-        <button type="button" id="btn-limpar" class="perigo">Apagar todos os treinos</button>
-      </div>
-    </section>
-
-    <!-- GRÁFICOS -->
-    <section class="painel">
-      <div class="topo-graficos">
-        <h2>Evolução</h2>
-        <select id="filtro">
-          <option value="corrida">Corrida</option>
-          <option value="natacao">Natação</option>
-        </select>
-      </div>
-      <p class="dica">Quanto mais alto no gráfico de ritmo, mais rápido você está.</p>
-      <h3 id="titulo-pace">Ritmo</h3>
-      <div class="caixa-grafico"><canvas id="grafico-pace"></canvas></div>
-      <h3>Distância por treino</h3>
-      <div class="caixa-grafico"><canvas id="grafico-distancia"></canvas></div>
-    </section>
-
-  </main>
-
-  <!-- Chart.js (gráficos) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <!-- type="module" é necessário para usar o Firebase via CDN -->
-  <script type="module" src="script.js"></script>
+  <!-- Vantagens -->
+  <section class="vantagens">
+    <div class="painel">
+      <h3>Registre cada treino</h3>
+      <p>Distância, tempo e esforço percebido de corridas e nados, tudo salvo na nuvem.</p>
+    </div>
+    <div class="painel">
+      <h3>Veja sua evolução</h3>
+      <p>Gráficos mostram como seu ritmo melhora ao longo das semanas.</p>
+    </div>
+    <div class="painel">
+      <h3>Clima do dia</h3>
+      <p>O app busca a temperatura de cada treino para você comparar com o desempenho.</p>
+    </div>
+  </section>
 </body>
 </html>

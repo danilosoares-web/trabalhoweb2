@@ -194,3 +194,106 @@ main.uma-coluna { grid-template-columns: 1fr; }
   text-decoration: none;
   font: 700 0.88rem "Barlow Semi Condensed", sans-serif;
 }
+
+/* ===== Página inicial ===== */
+.topo {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5vw;
+}
+.topo strong { font: 700 1.4rem "Barlow Semi Condensed", sans-serif; }
+.topo a {
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+}
+.topo a:hover { background: rgba(255, 255, 255, 0.15); }
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Cada lado tem 3 camadas: escurecimento, foto e uma cor de reserva caso a foto não exista */
+.lado {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.lado.nadador {
+  background-image:
+    linear-gradient(rgba(5, 12, 22, 0.45), rgba(5, 12, 22, 0.8)),
+    url("img/nadador.jpg"),
+    linear-gradient(135deg, #0b3b57, #38bdf8);
+}
+.lado.corredor {
+  background-image:
+    linear-gradient(rgba(5, 12, 22, 0.45), rgba(5, 12, 22, 0.8)),
+    url("img/corredor.jpg"),
+    linear-gradient(135deg, #5a1f0a, #ff7a45);
+}
+.rotulo {
+  position: absolute;
+  left: 5vw; bottom: 32px;
+  font: 700 1.1rem "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 12px;
+  border-left: 4px solid;
+}
+.rotulo.azul { color: var(--azul); }
+.rotulo.laranja { color: var(--laranja); }
+
+.hero-texto {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  padding: 24px;
+  text-align: center;
+}
+.hero-texto h1 {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.05;
+  max-width: 820px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+}
+.hero-texto p { margin: 0; max-width: 560px; font-size: 1.15rem; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7); }
+.botao-grande {
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--azul), var(--laranja));
+  color: #04111f;
+  font: 700 1.15rem "Barlow Semi Condensed", sans-serif;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.botao-grande:hover { transform: translateY(-2px) scale(1.03); }
+
+.vantagens {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.vantagens p { margin: 0; color: var(--suave); }
+
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .rotulo { bottom: 16px; }
+}

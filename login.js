@@ -9,7 +9,7 @@ const campoSenha = document.getElementById("senha");
 
 // Se já estiver logado (ou assim que entrar), vai para o painel
 onAuthStateChanged(auth, (usuario) => {
-  if (usuario) location.href = "index.html";
+  if (usuario) location.href = "painel.html";
 });
 
 // Traduz os códigos de erro do Firebase
